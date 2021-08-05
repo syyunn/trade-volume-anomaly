@@ -33,7 +33,8 @@ for year in years:
     for key in keys:
         rdxs = df.index[df[0] == int(str(year) + key)].tolist()
         if len(rdxs) > 0:
-            tvs.append((df.iloc[rdxs[0], 4] * 100) / gdps[str(year)])
+            # tvs.append((df.iloc[rdxs[0], 4] * 100) / gdps[str(year)])
+            tvs.append(df.iloc[rdxs[0], 4] * 100)
         else:
             try:
                 tvs.append(tvs[-1])
